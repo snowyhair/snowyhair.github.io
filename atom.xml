@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Trouble Is a Friend]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="//"/>
-  <updated>2014-06-04T09:39:20.744Z</updated>
+  <updated>2014-06-10T09:03:29.915Z</updated>
   <id>//</id>
   
   <author>
@@ -15,39 +15,144 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="/2014/05/29/hello-world/"/>
-    <id>/2014/05/29/hello-world/</id>
-    <published>2014-05-29T01:45:04.000Z</published>
-    <updated>2014-06-03T07:09:55.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank">trobuleshooting</a> or you can ask me on <a href="https://github.com/tommy351/hexo/issues" target="_blank">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>$ hexo new <span class="string">"My New Post"</span>
-</pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>$ hexo server
-</pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>$ hexo generate
-</pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>$ hexo deploy
-</pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank">Deployment</a></p>
+    <title><![CDATA[在hexo博客上发表你的文章]]></title>
+    <link href="/2014/06/10/hexo-working/"/>
+    <id>/2014/06/10/hexo-working/</id>
+    <published>2014-06-10T05:41:09.000Z</published>
+    <updated>2014-06-10T09:03:03.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p><a href="\">上一节</a>已经完成了hexo博客的部署工作,接下来将是如何平时正常的发表文章<br><br/></p>
+<hr>
+<h2 id="发表文章">发表文章</h2>
+<p>在已经安装hexo了的目录下,右键Git Bash</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ hexo new [layout] postName
+</pre></td></tr></table></figure><br><em>layout</em>是可选参数，默认值为post。请到scaffolds目录下可查看现有样式<br>下面看下我自己设置的post样式</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre>layout: { { layout } }         //样式名
+title: { { title } }           //标题名
+date: { { date } }             //日期
+categories:                    //类型
+tags: [,]                      //标签
+description:                   //描述
+photos:                        //标题图 
+---
+</pre></td></tr></table></figure><br>这里大括号间加多了个空格,是为了防止被转义<br><br/></p>
+<hr>
+<h2 id="Markdown语法">Markdown语法</h2>
+<p>具体方式详见<a href="http://wowubuntu.com/markdown/" target="_blank">Markdown 语法说明</a><br><br/></p>
+<hr>
+<h2 id="上传至Github">上传至Github</h2>
+<p>任何修改了本地文件,都需要生成静态页面再部署</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>$ hexo generate                //生成静态页面
+$ hexo deploy                  //部署
+</pre></td></tr></table></figure><br>hexo还支持简单拼写</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>$ hexo g                       //hexo generate
+$ hexo d                       //hexo deploy
+$ hexo s                       //hexo server
+$ hexo n                       //hexo new
+</pre></td></tr></table></figure><br> <br/></p>
+<hr>
+<h2 id="预告">预告</h2>
+<p><a href="\">下一节</a>将对hexo博客上的各部分进行个性化微调</p>
 ]]></content>
     
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+      <category term="教程" scheme="/categories/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[搭建属于你的hexo博客系统]]></title>
+    <link href="/2014/06/05/hexo-building/"/>
+    <id>/2014/06/05/hexo-building/</id>
+    <published>2014-06-05T00:42:14.000Z</published>
+    <updated>2014-06-10T07:53:51.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p>自从做了程序猿的工作开始,一直在寻找可以记录自己历程的平台,转来转去还是博客靠谱,既然是写博客,当然是找开源的呀,最后选定<a href="https://github.com/tommy351/hexo/" target="_blank">hexo</a>,从我的角度上看,hexo的优点有以下方面</p>
+<ul>
+<li><em>易用</em>  无论是部署还是平时的写文章</li>
+<li><em>快速</em>    静态文件生成快速</li>
+<li><em>用户多</em>    遇到什么问题,上网搜搜,问问前辈还是可以解决滴</li>
+</ul>
+<p>这里要感谢<a href="https://twitter.com/tommy351" target="_blank">tommy351</a>,是他写下了简单易用的hexo,还有两位前辈的教程<a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank">不如</a>,<a href="http://zipperary.com/2013/05/28/hexo-guide-1/" target="_blank">zippera</a><br>下面就开始正题了,没有什么比自己去创造更让人兴奋了<br><br/></p>
+<hr>
+<h2 id="准备工作">准备工作</h2>
+<h3 id="注册github">注册github</h3>
+<p>注册一个<a href="https://github.com/" target="_blank">github</a>账号,<a href="https://github.com/new" target="_blank">新建</a>与账号名对应的仓库userName.github.io</p>
+<h3 id="安装文本编辑器">安装文本编辑器</h3>
+<p>选择你喜欢的文本编辑器,我使用的是<a href="http://notepad-plus-plus.org/download/" target="_blank">notepad++</a></p>
+<h3 id="安装node">安装<a href="http://nodejs.org/download/" target="_blank">node</a></h3>
+<h3 id="安装git">安装git</h3>
+<p>选择你喜欢的git客户端,下载并安装,我使用的是<a href="http://msysgit.github.io/" target="_blank">msysgit</a></p>
+<h3 id="生成ssh-key">生成ssh-key</h3>
+<p>任意目录下右键Git Bash</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>$ git config --global user.email <span class="string">"邮箱"</span>    //设置git邮箱
+$ git config --global user.name <span class="string">"用户名"</span>   //设置git用户名
+$ ssh-keygen -t rsa -C <span class="string">"邮箱"</span>              //生成密钥
+</pre></td></tr></table></figure><br>随后它会让你设置<br>1. 输出密钥地址(直接回车默认地址)<br>2. 密码(直接回车两次不设置密码)<br>3. 完成后将显示密钥输出地址<br>在该地址上用文本编辑器打开pub文件,拷贝其中内容,将其添加到<a href="https://github.com/settings/ssh" target="_blank">Add SSH key</a><br><br>添加完成后,通过以下指令可查看时否有效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ ssh -T git@github.com
+</pre></td></tr></table></figure>
+
+<h3 id="安装hexo">安装hexo</h3>
+<p>在你需要安装hexo的目录下,右键Git Bash</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>$ npm install -g hexo   //全局安装hexo系统
+$ hexo init             //当前文件夹初始化hexo文件夹
+$ npm install
+</pre></td></tr></table></figure><br><br/></p>
+<hr>
+<h2 id="部署使用">部署使用</h2>
+<h3 id="本地启动">本地启动</h3>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ hexo server
+</pre></td></tr></table></figure><br>通过浏览器访问<a href="http://localhost:4000" target="_blank">http://localhost:4000</a>查看效果</p>
+<h3 id="部署在github">部署在github</h3>
+<p>编辑hexo文件夹里的_config.yml文件,添加其中</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="label">deploy:</span>
+  type: github
+  repository: https://github<span class="preprocessor">.com</span>/userName/userName<span class="preprocessor">.github</span><span class="preprocessor">.io</span><span class="preprocessor">.git</span>
+  branch: master
+</pre></td></tr></table></figure></p>
+<h3 id="上传">上传</h3>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>$ hexo generate //生成静态页面
+$ hexo deploy   //部署
+</pre></td></tr></table></figure><br>当你修改了本地文件后,都需要先重新生成静态页面再部署到github<br>现在,现在你的博客就出现在github上了,通过浏览器访问<a href="http://userName.github.io" target="_blank">http://userName.github.io</a> ,第一次部署需要10分钟左右的等待时间<br><br/></p>
+<hr>
+<h2 id="预告">预告</h2>
+<p><a href="\">下一节</a>将演示如何在hexo博客上发表文章</p>
+]]></content>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+      <category term="教程" scheme="/categories/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
